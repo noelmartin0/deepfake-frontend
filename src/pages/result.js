@@ -2,8 +2,11 @@ import Background from "../components/property1-variant";
 import Footer from "../components/footer";
 import Navbar from "../components/nav";
 import "./result.css";
+import React, { useState, useEffect } from 'react';
 
-const Home = () => {
+
+
+const Result = () => {
   return (
     <div className="home">
       <header className="result-parent">
@@ -33,4 +36,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Result;
