@@ -75,7 +75,8 @@
   }
 
   .result-area2{
-    height: 100vh;
+
+    min-height: 70vh;
   }
   
   .deepfake-detectionio2{
