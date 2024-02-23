@@ -75,23 +75,22 @@
   }
 
   .result-area2{
-
     min-height: 70vh;
   }
   
   .deepfake-detectionio2{
-    font-size: 13.36px;
+    font-size: 22.36px;
     line-height: 19px;
   }
   .io2{
-   font-size: 50.59px;
+   font-size: 66.59px;
   }
   .deepfake-detector2{
-   margin-top: -50px;
+   margin-top: -40px;
   }
   .img-uploaded{
-   width: 200px;
-   height: 225.59px;
+   width: 300px;
+   height: 338.39px;
   }
 }
 
