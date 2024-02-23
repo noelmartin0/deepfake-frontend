@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="secondary-frame">
       <div className="secondary-frame-child" />
-      <Logo/>
+      <a href="/"><Logo/></a>
       <div className="vector-xicon">
         <div className="description">
           <img

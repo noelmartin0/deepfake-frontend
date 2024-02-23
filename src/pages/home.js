@@ -23,7 +23,7 @@ const Home = () => {
               <p className="deepfake"><span className="deep">Deep</span><span className="io">Fake</span></p>
               <p className="detectionio">Detection<span className="io">.io</span></p>
             </h1>
-              <Upload/>
+              <a href="/result"><Upload/></a>
           </div>
         </div>
         <Footer />

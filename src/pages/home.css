@@ -99,13 +99,12 @@
 }
 @media screen and (max-width: 450px) {
   .result-parent {
-    gap: 253px 0;
+    gap: 0px 0;
     padding-top: 0px;
     box-sizing: border-box;
   }
   .result-area{
-    min-height: 0vh;
-    margin-top: -100px;
+    height: 100vh;
   }
   .deepfake-detectionio{
     font-size: 50px;

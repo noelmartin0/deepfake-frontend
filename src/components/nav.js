@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <footer className="navbar">
       <div className="secondary-frame-child" />
-      <Logo/>
+      <a href="/"><Logo/></a>
     </footer>
   );
 };

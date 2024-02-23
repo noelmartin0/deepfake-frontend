@@ -74,17 +74,17 @@
   }
   .vector-xicon{
     align-items: flex-start;
-    font-size: 8.8px;
+    font-size: 10px;
     gap: 10px;
   }
   .facebook-icon,
 .solarrecordsquarelinear-icon,
 .x-icon,.linkein-con-icon{
-  height: 16px;
-  width: 17px;
+  height: 23px;
+  width: 24px;
 }
 .description{
-  gap: 0 11px;
+  gap: 0 17px;
   align-items: flex-start;
   justify-content: flex-start;
 }
