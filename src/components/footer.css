@@ -7,39 +7,7 @@
   display: none;
   max-width: 100%;
 }
-.eep1 {
-  text-transform: lowercase;
-}
-.deep1 {
-  color: var(--color-white);
-}
-.f1 {
-  text-transform: capitalize;
-}
-.ake1 {
-  text-transform: lowercase;
-}
-.deepfake1 {
-  margin-block-start: 0;
-  margin-block-end: 0.44px;
-}
-.io1 {
-  color: var(--color-yellow-200);
-}
-.etectionio1 {
-  text-transform: lowercase;
-}
-.detectionio1 {
-  margin: 0;
-  color: var(--color-white);
-}
-.deepfake-detectionio1 {
-  position: relative;
-  letter-spacing: -0.02em;
-  line-height: 24.07px;
-  font-weight: 500;
-  z-index: 2;
-}
+
 .facebook-icon,
 .solarrecordsquarelinear-icon,
 .x-icon {
@@ -48,23 +16,13 @@
   position: relative;
   min-height: 32px;
 }
-.linkein-con-icon {
-  height: 100%;
-  width: 30px;
-  position: absolute;
-  margin: 0 !important;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 2.01px;
-  max-height: 100%;
-}
+
 .description {
   width: 192px;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: flex-end;
+  justify-content: flex-end;
   position: relative;
   gap: 0 24px;
   z-index: 2;
@@ -77,7 +35,7 @@
 .vector-xicon {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-start;
   gap: 11px 0;
   font-size: var(--font-size-base);
@@ -111,6 +69,23 @@
 @media screen and (max-width: 450px) {
   .secondary-frame {
     flex-direction: column;
-    gap: 75px;
+    gap: 10px;
+    padding: 15px 25px;
   }
+  .vector-xicon{
+    align-items: flex-start;
+    font-size: 8.8px;
+    gap: 10px;
+  }
+  .facebook-icon,
+.solarrecordsquarelinear-icon,
+.x-icon,.linkein-con-icon{
+  height: 16px;
+  width: 17px;
+}
+.description{
+  gap: 0 11px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
 }

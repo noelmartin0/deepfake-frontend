@@ -22,7 +22,7 @@ const Home = () => {
           <img className="img-uploaded" src="/pexelsandreapiacquadio774909-1@2x.png"/>
           <div className="deepfake-detector2">
             <h1 className="deepfake-detectionio2">
-              <p className="deepfake2"><span className="deep">The video file upload is 97.2 %</span></p>
+              <p className="deepfake2"><span className="deep">The video file upload is</span></p>
               <p><span className="io2">Real.</span></p>
             </h1>
           </div>

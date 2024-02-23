@@ -21,12 +21,7 @@ const Footer = () => {
             alt=""
             src="/facebookicon.svg"
           />
-          <img
-            className="linkein-con-icon"
-            loading="eager"
-            alt=""
-            src="/linkeincon.svg"
-          />
+          
         </div>
         <div className="all-rights-reserved">All rights reserved ©2024</div>
       </div>

@@ -7,40 +7,7 @@
     display: none;
     max-width: 100%;
   }
-  .eep1 {
-    text-transform: lowercase;
-  }
-  .deep1 {
-    color: var(--color-white);
-  }
-  .f1 {
-    text-transform: capitalize;
-  }
-  .ake1 {
-    text-transform: lowercase;
-  }
-  .deepfake1 {
-    margin-block-start: 0;
-    margin-block-end: 0.44px;
-  }
-  .io1 {
-    color: var(--color-yellow-200);
-  }
-  .etectionio1 {
-    text-transform: lowercase;
-  }
-  .detectionio1 {
-    margin: 0;
-    color: var(--color-white);
-  }
-  .deepfake-detectionio1 {
-    position: relative;
-    letter-spacing: -0.02em;
-    line-height: 24.07px;
-    font-weight: 500;
-    z-index: 2;
-  }
-
+  
   .navbar {
     align-self: stretch;
     background-color: rgba(0,0,0,0);
@@ -66,3 +33,11 @@
     }
   }
   
+  @media screen and (max-width: 450px) {
+    .navbar{
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    
+  }

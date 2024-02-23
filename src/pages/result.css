@@ -73,6 +73,10 @@
     padding-top: 0px;
     box-sizing: border-box;
   }
+
+  .result-area2{
+    min-height: 0vh;
+  }
   
   .deepfake-detectionio2{
     font-size: 13.36px;
