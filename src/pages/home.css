@@ -32,9 +32,10 @@
 .deepfake-detector,
 .result-area {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   max-width: 100%;
-  margin-top: 75px;
+  margin-top: 0px;
   height: 100vh;
 }
 .deepfake-detector {
@@ -83,7 +84,8 @@
   }
   .result-area {
     max-width: calc(100% - 2px);
-    height: 60vh;
+    height: 100vh;
+    margin-top: -100px;
   }
   .deepfake-detectionio{
     font-size: 70px;
@@ -102,8 +104,8 @@
     box-sizing: border-box;
   }
   .result-area{
-    margin-top: 40px;
-    height: 20vh;
+    height: 60vh;
+    margin-top: -100px;
   }
   .deepfake-detectionio{
     font-size: 50px;
