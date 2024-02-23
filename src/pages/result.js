@@ -7,6 +7,15 @@ import React, { useState, useEffect } from 'react';
 
 
 const Result = () => {
+
+  const [randomNumber, setRandomNumber] = useState(null);
+
+  useEffect(() => {
+    const newNumber = Math.round(Math.random()); // Generates a random number between 0 and 1
+    console.log(newNumber)
+    setRandomNumber(newNumber);
+  }, []);
+
   return (
     <div className="home">
       <header className="result-parent">
@@ -22,11 +31,11 @@ const Result = () => {
           propBottom="0px"
         />
         <div className="result-area2">
-          <img className="img-uploaded" src="/pexelsandreapiacquadio774909-1@2x.png"/>
+          <img className="img-uploaded" src={randomNumber === 0 ? "/real.png" : "/fake.png"}/>
           <div className="deepfake-detector2">
             <h1 className="deepfake-detectionio2">
               <p className="deepfake2"><span className="deep">The video file upload is</span></p>
-              <p><span className="io2">Real.</span></p>
+              <p><span className="io2">{randomNumber === 0 ? "Real." : "Fake."}</span></p>
             </h1>
           </div>
         </div>
