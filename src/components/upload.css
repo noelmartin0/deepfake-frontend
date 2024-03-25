@@ -54,13 +54,15 @@
 
 .progress-bar {
   height: 100%;
-  background-color: yellow; /* Change this to your desired color */
+  background-color: var(--color-yellow-200); /* Change this to your desired color */
   position: absolute;
   left: 0;
   top: 0;
   z-index: 0;
-  transition: width 0.3s;
+  /* transition: width 0.3s; */
+  transition: width 18s cubic-bezier(0.165, 0.84, 0.44, 1); /* Adjust the cubic bezier curve */
 }
+
 
 @media screen and (max-width: 450px) {
   .upload {
