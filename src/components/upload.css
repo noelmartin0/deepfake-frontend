@@ -1,8 +1,8 @@
 .upload1 {
-    font-size: inherit;
+    font-size: var(--font-size-21xl);
     letter-spacing: -0.02em;
     font-weight: 500;
-    font-family: inherit;
+    font-family: var(--font-poppins);
     margin: auto;
     position: relative;
     /* top: calc(50% - 55px);

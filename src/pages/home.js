@@ -1,9 +1,25 @@
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import Background from "../components/property1-variant";
 import Footer from "../components/footer";
 import Upload from "../components/upload";
 import "./home.css";
 
 const Home = () => {
+  const navigate = useNavigate(); // Initialize navigate function
+
+  const [uploadSuccess, setUploadSuccess] = useState(false);
+
+  const handleUploadSuccess = (filePath) => {
+    console.log('File uploaded successfully:', filePath);
+    setUploadSuccess(true);
+    navigate('/result'); // Use navigate function to navigate
+  };
+
+  const handleUploadError = (error) => {
+    console.error('Error uploading file:', error);
+  };
+
   return (
     <div className="home">
       <header className="result-parent">
@@ -23,7 +39,7 @@ const Home = () => {
               <p className="deepfake"><span className="deep">Deep</span><span className="io">Fake</span></p>
               <p className="detectionio">Detection<span className="io">.io</span></p>
             </h1>
-              <a href="/result"><Upload/></a>
+              <Upload onSuccess={handleUploadSuccess} onError={handleUploadError} />
           </div>
         </div>
         <Footer />

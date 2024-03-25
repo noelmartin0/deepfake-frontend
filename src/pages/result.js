@@ -1,19 +1,45 @@
 import Background from "../components/property1-variant";
 import Footer from "../components/footer";
 import Navbar from "../components/nav";
+import axios from 'axios';
 import "./result.css";
 import React, { useState, useEffect } from 'react';
 
-
-
 const Result = () => {
-
   const [randomNumber, setRandomNumber] = useState(null);
+  const [videoFile, setVideoFile] = useState(null);
 
   useEffect(() => {
-    const newNumber = Math.round(Math.random()); // Generates a random number between 0 and 1
-    console.log(newNumber)
+    const newNumber = Math.round(Math.random());
     setRandomNumber(newNumber);
+
+    axios.get('http://localhost:5000/getVideo')
+      .then(response => {
+        setVideoFile(response.data.file_url);
+      })
+      .catch(error => {
+        console.error('Error fetching video file:', error);
+      });
+
+    const handleBeforeUnload = (event) => {
+      // Perform actions before page unload (e.g., delete files)
+      console.log('Left');
+      // Make an AJAX request to delete the uploaded file
+      axios.post('http://localhost:5000/delete_all_files')
+    .then(response => {
+        console.log('All files deleted successfully:', response.data);
+    })
+    .catch(error => {
+        console.error('Error deleting files:', error);
+    });
+
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
   }, []);
 
   return (
@@ -24,14 +50,12 @@ const Result = () => {
           propTop="0px"
           propBackground="linear-gradient(127.22deg, #000 53.53%, #16431d)"
           propLeft="0px"
-          // propWidth="100%"
-          // propHeight="100%"
           propMargin="0 !important"
           propRight="0px"
           propBottom="0px"
         />
         <div className="result-area2">
-          <img className="img-uploaded" src={randomNumber === 0 ? "/real.png" : "/fake.png"}/>
+          <video className="img-uploaded" controls src={videoFile}></video>
           <div className="deepfake-detector2">
             <h1 className="deepfake-detectionio2">
               <p className="deepfake2"><span className="deep">The video file upload is</span></p>
