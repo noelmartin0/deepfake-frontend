@@ -6,16 +6,16 @@ import "./result.css";
 import React, { useState, useEffect } from 'react';
 
 const Result = () => {
-  const [randomNumber, setRandomNumber] = useState(null);
   const [videoFile, setVideoFile] = useState(null);
+  const [resultValue, setResultValue] = useState(null);
 
   useEffect(() => {
-    const newNumber = Math.round(Math.random());
-    setRandomNumber(newNumber);
+
 
     axios.get('http://localhost:5000/getVideo')
       .then(response => {
         setVideoFile(response.data.file_url);
+        setResultValue(response.data.result);
       })
       .catch(error => {
         console.error('Error fetching video file:', error);
@@ -59,7 +59,7 @@ const Result = () => {
           <div className="deepfake-detector2">
             <h1 className="deepfake-detectionio2">
               <p className="deepfake2"><span className="deep">The video file upload is</span></p>
-              <p><span className="io2">{randomNumber === 0 ? "Real." : "Fake."}</span></p>
+              <p><span className="io2">{resultValue}</span></p>
             </h1>
           </div>
         </div>
